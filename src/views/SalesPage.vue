@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <!-- <ButtomNavBar></ButtomNavBar> -->
-    
+  <div class="sales-page__container">
+    <MainTitle title="Продажи" ></MainTitle>
+    <div class="sales-page__search">
+      searchc
+    </div>    
     <div class="testing">
 
     </div>
@@ -9,7 +11,7 @@
 </template>
 
 <script setup>
-import ButtomNavBar from '@/components/ButtomNavBar.vue';
+import MainTitle from '@/components/MainTitle.vue';
 import { ref } from 'vue';
 
 const name = ref('');
@@ -19,14 +21,21 @@ const name = ref('');
 </script>
 
 <style scoped>
-html, body {
-  margin: 0;
-  padding: 0;
+.sales-page__container{
+  min-width: 400px;
+  min-height: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: blueviolet;
 }
 
-.testing {
-  width: 300px;
-  height: 300px;
-  background-color: rgb(186, 195, 23);
+.sales-page__search {
+
 }
+
+
 </style>

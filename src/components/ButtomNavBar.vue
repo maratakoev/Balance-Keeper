@@ -56,7 +56,10 @@
       > 
 
       <router-link
-        class="bottom-nav-bar__unit">
+        to="/reports"
+        class="bottom-nav-bar__unit"
+        active-class="bottom-nav-bar__unit_active"
+        >
         <svg
           fill="currentColor"
           viewBox="0 0 24 24"
@@ -70,7 +73,10 @@
       > 
 
       <router-link
-        class="bottom-nav-bar__unit">
+        to="/clients"
+        class="bottom-nav-bar__unit"
+        active-class="bottom-nav-bar__unit_active"
+        >
         <svg
           viewBox="0 0 121.663 121.662"
           fill="currentColor"
@@ -95,7 +101,7 @@
           </g>
         </g>
         </svg>
-        <span class="bottom-nav-bar__text">Клиенты</span>
+        <span class="bottom-nav-bar__text">Партнеры</span>
       </router-link
       >     
 
@@ -120,7 +126,7 @@ const name = ref('');
     left: 0;
     right: 0;
     height: 90px;
-    background-color: green;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -151,26 +157,67 @@ const name = ref('');
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: white;
+    color: rgb(108, 106, 106);
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
 
   }
     
  .bottom-nav-bar__unit_active,
 .bottom-nav-bar__unit_active .bottom-nav-bar__icon,
 .bottom-nav-bar__unit_active .bottom-nav-bar__text {
-  color: rgb(54, 25, 242) !important;
+  color: rgb(59, 35, 244) !important;
 }
 
   .bottom-nav-bar__icon {
     width: 35px;
-    color: white;
+    color: rgb(150, 148, 148);
   }
 
   .bottom-nav-bar__text {
     font-size: 15px;
     font-weight: 800;
-    color: white;
+    color: rgb(150, 148, 148);
     letter-spacing: 0.7px;
   }
 
 </style>
+<!-- 
+Элементы:
+
+🔍 Поиск товара по названию
+📋 Список товаров:
+Название
+Количество на складе
+Себестоимость
+Категория (опционально)
+➕ Кнопка "Добавить товар" — открывает форму:
+Название
+Категория (выбрать/добавить)
+Себестоимость
+Количество
+✏️/🗑️ Иконки редактирования/удаления рядом с каждым товаром
+
+
+➕ Продажа
+Цель: оформление продажи и учёт прибыли.
+Элементы:
+
+📦 Выбор товара из выпадающего списка
+🔢 Ввод количества к продаже
+💵 Ввод цены продажи
+✅ Кнопка "Продать" — сохраняет запись:
+Дата, товар, количество, цена продажи, прибыль
+❗ Проверка: достаточно ли остатка
+📁 Создаётся файл с записью (Capacitor Filesystem API)
+
+📊 Отчёты
+Цель: отслеживание продаж и прибыли.
+Элементы:
+
+📅 Фильтр по дате (день/неделя/месяц)
+📋 Список продаж:
+Товар, дата, количество, цена продажи, прибыль
+💰 Суммарная прибыль
+📤 Экспорт отчёта (по кнопке)
+🔍 Фильтрация по товару или категории -->

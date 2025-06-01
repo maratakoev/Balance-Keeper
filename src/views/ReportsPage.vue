@@ -1,9 +1,17 @@
 <template>
-  <div>
+  <div class="reports-page__container">
+    <MainTitle title="Отчеты" ></MainTitle>
+    <div class="reports-page__search">
+      searchc
+    </div>    
+    <div class="testing">
+
+    </div>
   </div>
 </template>
 
 <script setup>
+import MainTitle from '@/components/MainTitle.vue';
 import { ref } from 'vue';
 
 const name = ref('');
@@ -13,8 +21,21 @@ const name = ref('');
 </script>
 
 <style scoped>
-html, body {
-  margin: 0;
-  padding: 0;
+.reports-page__container{
+  min-width: 400px;
+  min-height: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: blueviolet;
 }
+
+.reports-page__search {
+
+}
+
+
 </style>

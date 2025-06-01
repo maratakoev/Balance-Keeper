@@ -1,15 +1,20 @@
 <template>
-  <div>
-    <!-- <ButtomNavBar></ButtomNavBar> -->
-    
-    <div class="testing">
+  <div class="home-page__container">
+    <MainTitle title="Склад" ></MainTitle>
+    <Search></Search>  
+    <ProductCard productCardTitle="Кола 1,5 л"></ProductCard>
+    <ProductCard productCardTitle="Кола 2 л"></ProductCard>
+    <ProductCard productCardTitle="Кола ж/б"></ProductCard>
+    <ProductCard productCardTitle="Адреналин"></ProductCard>
 
     </div>
-  </div>
+  
 </template>
 
 <script setup>
-import ButtomNavBar from '@/components/ButtomNavBar.vue';
+import MainTitle from '@/components/MainTitle.vue';
+import ProductCard from '@/components/ProductCard.vue';
+import Search from '@/components/Search.vue';
 import { ref } from 'vue';
 
 const name = ref('');
@@ -19,14 +24,21 @@ const name = ref('');
 </script>
 
 <style scoped>
-html, body {
-  margin: 0;
-  padding: 0;
+.home-page__container{
+  min-width: 400px;
+  min-height: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgb(199, 197, 197);
 }
 
-.testing {
-  width: 300px;
-  height: 300px;
-  background-color: red;
+.home-page__search {
+
 }
+
+
 </style>

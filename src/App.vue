@@ -7,7 +7,6 @@
 
 <script setup>
 import { ref } from 'vue';
-import HomeView from './views/HomeView.vue';
 import ButtomNavBar from './components/ButtomNavBar.vue';
 
 const name = ref('');
@@ -16,9 +15,15 @@ const name = ref('');
 
 </script>
 
-<style scoped>
+<style >
 html, body {
   margin: 0;
   padding: 0;
+}
+
+#app {
+  padding: 0;
+  margin: 0;
+  height: 100%;
 }
 </style>
