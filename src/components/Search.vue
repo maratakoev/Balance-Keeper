@@ -34,6 +34,7 @@ const name = ref('');
 <style scoped>
 .search__container {
   width: 100%;
+  margin-top: 15px;
   height: auto;
   border-radius: 12px;
   border: 1px solid grey;
